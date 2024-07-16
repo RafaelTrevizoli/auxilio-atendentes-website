@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="../../../img/fivcon.png" />
+    <link rel="stylesheet" href="../../../styles/secundary-pag.css">
+    <title>PVC - 25x25cm</title>
+</head>
+
+<body>
+    <h1>PVC 25x25cm - Kits</h1>
+
+
+    <header>
+        <ul>
+            <li><a href="../../../index.html">MENU PRINCIPAL</a></li>
+            <li><a href="qnt25x25.html">MÚLTIPLOS AMBIENTES</a></li>
+        </ul>
+    </header>
+
+    <div class="geral">
+        <div class="border">
+            <div class="center">
+                <form id="calcForm">
+                    <div class="form">
+                        <label for="n1">Digite a primeira medida (<y class="y3">m</y>): </label>
+                        <input type="number" name="n1" id="n1" step="0.01">
+                    </div>
+
+                    <div class="form">
+                        <label for="n2">Digite a segunda medida (<y class="y3">m</y>): </label>
+                        <input type="number" name="n2" id="n2" step="0.01">
+                    </div>
+
+                    <div>
+                        <input class="button-calcular" type="button" id="calcular" value="Calcular">
+                        <button class="button-apagar" type="button" id="apagarMedidas">Apagar Campo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="border">
+            <div class="center">
+                <form id="calcForm">
+                    <div class="form">
+                        <label for="m1">Digite a medida em (<y class="y3">m²</y>): </label>
+                        <input type="number" name="m1" id="m1" step="0.01">
+                    </div>
+                    <div>
+                        <input class="button-calcular" type="button" id="calcular2" value="Calcular">
+                        <button class="button-apagar" type="button" id="apagarMedidas2">Apagar Campo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="result" id="resultado"></div>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function () {
+            const n1 = parseFloat(document.getElementById('n1').value);
+            const n2 = parseFloat(document.getElementById('n2').value);
+
+            let media = n1 * n2;
+            let result = media / 0.0625;
+
+            result = result.toFixed();
+
+            let  recomendado = "";
+
+            if (result > 0 && result <= 10) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 10 unidades👇";
+            }
+            if (result > 10 && result <= 20) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 10 unidades👇";
+            }
+            if (result > 20 && result <= 30) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 10 unidades👇";
+            }
+            if (result > 30 && result <= 40) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 20 unidades👇";
+            }
+            if (result > 40 && result <= 50) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 50 unidades👇";
+            }
+            if (result > 50 && result <= 60) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 20 unidades👇";
+            }
+            if (result > 60 && result <= 70) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 50 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 70 && result <= 80) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 50 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 80 && result <= 90) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kits com 50 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 90 && result <= 100) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 100 && result <= 110) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 110 && result <= 120) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 120 && result <= 130) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 130 && result <= 140) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 140 && result <= 150) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 150 && result <= 160) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 160 && result <= 170) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 170 && result <= 180) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 4 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 180 && result <= 190) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 190 && result <= 200) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 200 && result <= 210) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 210 && result <= 220) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 220 && result <= 230) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 230 && result <= 240) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 240 && result <= 250) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 250 && result <= 260) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 260 && result <= 270) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 270 && result <= 280) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 4 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 280 && result <= 290) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 290 && result <= 300) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 300 && result <= 310) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 310 && result <= 320) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 320 && result <= 330) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 330 && result <= 340) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 40 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 340 && result <= 350) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 350 && result <= 360) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 360 && result <= 370) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 370 && result <= 380) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 4 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 380 && result <= 390) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 390 && result <= 400) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 400 && result <= 410) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 410 && result <= 420) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 420 && result <= 430) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 430 && result < 440) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 440 && result <= 450) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 450 && result <= 460) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 460 && result <= 470) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 470 && result <= 480) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 4 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 480 && result <= 490) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 490 && result <= 500) {
+                recomendado = "Para compor a medida de " + n1 + "m x " + n2 + "m será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 5 kits com 100 unidades !" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            document.getElementById('resultado').innerHTML = recomendado;
+        });
+
+        document.getElementById('calcular2').addEventListener('click', function () {
+
+            const m1 = parseFloat(document.getElementById('m1').value);
+            let result = m1 / 0.0625;
+            result = result.toFixed();
+
+            let recomendado = "";
+
+            if (result > 0 && result <= 10) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 10 unidades👇";
+            }
+            if (result > 10 && result <= 20) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 10 unidades👇";
+            }
+            if (result > 20 && result <= 30) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 10 unidades👇";
+            }
+            if (result > 30 && result <= 40) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 20 unidades👇";
+            }
+            if (result > 40 && result <= 50) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 50 unidades👇";
+            }
+            if (result > 50 && result <= 60) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 20 unidades👇";
+            }
+            if (result > 60 && result <= 70) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 50 unidades + 1 kit com 20 unidades !" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 70 && result <= 80) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 50 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 80 && result <= 90) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 50 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 90 && result <= 100) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 100 && result <= 110) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 110 && result <= 120) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 120 && result <= 130) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 130 && result <= 140) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 140 && result <= 150) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 150 && result <= 160) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 160 && result <= 170) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 170 && result <= 180) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 4 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 180 && result <= 190) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 1 kit com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 190 && result <= 200) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 200 && result <= 210) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 210 && result <= 220) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 220 && result <= 230) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 230 && result <= 240) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 240 && result <= 250) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 250 && result <= 260) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 260 && result <= 270) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 270 && result <= 280) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 4 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 280 && result <= 290) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 2 kits com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 290 && result <= 300) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100  !" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 300 && result <= 310) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 310 && result <= 320) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 320 && result <= 330) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 330 && result <= 340) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 40 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 340 && result <= 350) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 350 && result <= 360) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 360 && result <= 370) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 370 && result <= 380) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 4 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 380 && result <= 390) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 3 kits com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 390 && result <= 400) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            if (result > 400 && result <= 410) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 1 kit com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 410 && result <= 420) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 1 kit com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 420 && result <= 430) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 3 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 430 && result < 440) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 2 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 440 && result <= 450) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 1 kit com 50 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 450 && result <= 460) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 3 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 460 && result <= 470) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 7 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 470 && result <= 480) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 4 kits com 20 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 480 && result <= 490) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 4 kits com 100 unidades + 9 kits com 10 unidades!" + "<br>" + "<br>"
+                    + "Segue ambos os anúncios abaixo👇" + "<br>" + "<br>"
+                    + "No caso, será necessário adicionar ambos os links ao carrinho, após isso finalizar a compra, assim constará para nós apenas uma única compra.";
+            }
+            if (result > 490 && result <= 500) {
+                recomendado = "Para compor a medida de " + m1 + "m² será necessário " + result + " unidades de placas 25x25cm." + "<br>" + "Para compra de " + result + " unidades, recomendo que compre 5 kits com 100 unidades!" + "<br>" + "<br>"
+                    + "Segue nosso kit com 100 unidades👇";
+            }
+            document.getElementById('resultado').innerHTML = recomendado;
+        });
+    </script>
+
+    <script src="../../js/del.js"></script>
+    
+    <footer>
+        <div class="footer-content">
+            <h4 class="text-name">&copy; 2024 Created by : <y class="text-name-cor"> Rafael Konscca</y>
+            </h4>
+        </div>
+    </footer>
+
+</body>
+
+</html>
