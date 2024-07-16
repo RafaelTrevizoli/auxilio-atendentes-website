@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="../../../img/fivcon.png" />
+    <link rel="stylesheet" href="../../../styles/secundary-pag.css">
+    <title>Foto Mural</title>
+</head>
+
+<body>
+
+    <h1>Foto Mural - Unitário</h1>
+
+    <header>
+        <ul>
+            <li><a href="../../../index.html">MENU PRINCIPAL</a></li>
+        </ul>
+    </header>
+
+    <div class="geral">
+        <div class="border">
+            <div class="center">
+                <form>
+                    <div class="form">
+                        <label for="n1">Digite a primeira medida (<y class="y3">Altura</y>): </label>
+                        <input type="number" name="n1" id="n1" step="0.01">
+                    </div>
+
+                    <div class="form">
+                        <label for="n2">Digite a segunda medida (<y class="y3">Largura</y>): </label>
+                        <input type="number" name="n2" id="n2" step="0.01">
+                    </div>
+
+                    <div>
+                        <input class="button-calcular" type="button" id="calcular" value="Calcular">
+                        <button class="button-apagar" type="button" id="apagarMedidas">Apagar Campo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="result" id="resultado"></div>
+    <button class="button-copiar" id="botao">Copiar Texto</button>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function () {
+            const n1 = parseFloat(document.getElementById('n1').value);
+            const n2 = parseFloat(document.getElementById('n2').value);
+
+            const media = Math.ceil(n1 * n2);
+
+            const resultado = "Para medida de " + n1 + "m de Altura x " + n2 + "m de Largura, recomendo que compre " + media + " unidades do nosso foto mural" + "!" + "<br> <br>" +
+                "Segue o anúncio abaixo👇";
+
+            document.getElementById('resultado').innerHTML = resultado;
+        });
+    </script>
+    
+    <script src="../../js/cop.js"></script>
+    <script src="../../js/del.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <h4 class="text-name">&copy; 2024 Created by : <y class="text-name-cor"> Rafael Konscca</y></h4>
+        </div>
+    </footer>
+</body>
+
+</html>
