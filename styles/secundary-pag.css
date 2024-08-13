@@ -47,23 +47,6 @@ h1, p, ul, form, footer, header, .border,.label,input[type="number"],.button-cal
     animation: slideIn 0.5s ease-in-out forwards;
 }
 
-body::-webkit-scrollbar {
-    width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #7d63b3;
-    border-radius: 50px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background-color: #d995ee;
-}
-
 h1 {
     background: linear-gradient(0.25turn, #2d0579, #994fee, #ff00b3);
     color: #fff;
@@ -238,7 +221,7 @@ input[type="number"]:focus {
 }
 
 ::selection {
-    background: #d995ee;
+    background: #555555;
     color: #ffffff;
 }
 

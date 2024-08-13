@@ -53,22 +53,24 @@
                 </ul>
             </div>
 
-            <div class="borda-madeira">
-                <h2>MADEIRA</h2>
+            <div class="borda-adesivo">
+                <h2>ADESIVOS</h2>
                 <ul>
-                    <li><a href="pags/madeira/53x15cm/pag53x15.html">53x15cm</a></li>
-                    <li><a href="pags/madeira/45x1150cm/pag45x1150.html">45x11,50cm</a></li>
+                    <li><a href="pags/adesivos/fotomural/fotomural.html">Foto Mural</a></li>
+                    <li><a href="pags/adesivos/papeldeparede/papeldeparede.html">Papel de Parede</a></li>
+                    <li><a href="pags/adesivos/adesivoparapiso/pagpiso.html">Adesivo para Piso</a></li>
                 </ul>
             </div>
+
         </div>
 
         <div class="conjunto-meio">
-            <div class="borda-isopor">
-                <h2>ISOPOR</h2>
+
+            <div class="borda-liverpool">
+                <h2>LIVERPOOL</h2>
                 <ul>
-                    <li><a href="pags/isopor/30x50cm/pag30x50.html">30x50cm</a></li>
-                    <li><a href="pags/isopor/1mx30cm/pag1x30.html">1mx30cm</a></li>
-                    <li><a href="pags/isopor/1mx50cm/pag1x50.html">1mx50cm</a></li>
+                    <li><a href="pags/liverpool/15x15cm/pag15x15.html">15x15cm</a></li>
+                    <li><a href="pags/liverpool/18x18cm/pag18x18.html">18x18cm</a></li>
                 </ul>
             </div>
 
@@ -80,40 +82,46 @@
                 </ul>
             </div>
 
-            <div class="borda-adesivo">
-                <h2>ADESIVOS</h2>
+            <div class="borda-madeira">
+                <h2>MADEIRA</h2>
                 <ul>
-                    <li><a href="pags/adesivos/fotomural/fotomural.html">Foto Mural</a></li>
-                    <li><a href="pags/adesivos/papeldeparede/papeldeparede.html">Papel de Parede</a></li>
-                    <li><a href="pags/adesivos/adesivoparapiso/pagpiso.html">Adesivo para Piso</a></li>
+                    <li><a href="pags/madeira/53x15cm/pag53x15.html">53x15cm</a></li>
+                    <li><a href="pags/madeira/45x1150cm/pag45x1150.html">45x11.50cm</a></li>
                 </ul>
             </div>
         </div>
 
 
         <div class="conjunto-meio">
-
+              
+            <div class="borda-isopor">
+                <h2>ISOPOR</h2>
+                <ul>
+                    <li><a href="pags/isopor/30x50cm/pag30x50.html">30x50cm</a></li>
+                    <li><a href="pags/isopor/1mx30cm/pag1x30.html">1mx30cm</a></li>
+                    <li><a href="pags/isopor/1mx50cm/pag1x50.html">1mx50cm</a></li>
+                </ul>
+            </div>
 
             <div class="borda-cabeceira">
                 <h2>CABECEIRA</h2>
                 <ul>
                     <li><a href="pags/cabeceira/40x30cm/pag40x30.html">40x30cm</a></li>
+                    <li><a href="">45x20cm</a></li>
                     <li><a href="pags/cabeceira/60x20cm/pag60x20.html">60x20cm</a></li>
                 </ul>
             </div>
 
-            <div class="borda-liverpool">
-                <h2>LIVERPOOL</h2>
+            <div class="borda-acrilico">
+                <h2>Acrílico</h2>
                 <ul>
-                    <li><a href="pags/liverpool/15x15cm/pag15x15.html">15x15cm</a></li>
-                    <li><a href="pags/liverpool/18x18cm/pag18x18.html">18x18cm</a></li>
+                    <li><a href="pags/acrilico/10x10cm/pag10x10.html" class="maintenance-link">10x10cm</a></li>
+                    <li><a href="pags/acrilico/50x50cm/pag50x50.html" class="maintenance-link">50x50cm</a></li>
+                    <li><a href="pags/acrilico/098x085cm/pag098x085.html" class="maintenance-link">9.8x8.5cm</a></li>
                 </ul>
             </div>
-
-            <div class="border-proximo">
-
-            </div>
         </div>
+
     </div>
 
     <div class="faixa-meio">
@@ -135,6 +143,20 @@
             </h4>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const maintenanceLinks = document.querySelectorAll('.maintenance-link');
+    
+            maintenanceLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Impede a navegação
+                    alert('Em manutenção, aguarde!'); // Exibe a mensagem
+                });
+            });
+        });
+    </script>
+    
 </body>
 
 </html>

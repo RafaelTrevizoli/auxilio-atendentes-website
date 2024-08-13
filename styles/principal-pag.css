@@ -44,23 +44,6 @@ h1, p, ul, .border, .rodateto, form, .label, input[type="number"], .button-calcu
     }
 }
 
-body::-webkit-scrollbar {
-    width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #7d63b3;
-    border-radius: 50px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background-color: #d995ee;
-}
-
 .teto-cima {
     background: linear-gradient(0.25turn, #2d0579, #994fee, #ff00b3);
     color: #fff;
@@ -99,9 +82,11 @@ body::-webkit-scrollbar-thumb:hover {
 .faixa-meio {
     background-color: #994fee;
     color: #fff;
-    width: 100%;
+    width: 95%;
     font-size: 45px;
     height: 70px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin-top: 20px;
 }
 
 h2 {
@@ -169,7 +154,7 @@ a {
 .borda-desconto {
     border-radius: 10px;
     margin: 20px 0;
-    margin-top: 100px;
+    margin-top: 150px;
     padding: 10px;
     width: 400px;
     height: 220px;
@@ -186,7 +171,7 @@ a {
 .borda-cabeceira,
 .borda-adesivo,
 .borda-isopor,
-.borda-proximo {
+.borda-acrilico {
     border-radius: 10px;
     margin: 20px 0;
     padding: 30px;
@@ -253,6 +238,13 @@ a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+.borda-acrilico:hover {
+    background-image: url('../img/acrilico.jpg');
+    transform: scale(1.02);
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
 .borda-desconto:hover {
     background-image: url('../img/valor.jpg');
     transform: scale(1.02);
@@ -268,7 +260,8 @@ a {
 .borda-espuma:hover h2,
 .borda-adesivo:hover h2,
 .borda-cabeceira:hover h2,
-.borda-desconto:hover h2 {
+.borda-desconto:hover h2,
+.borda-acrilico:hover h2 {
     color: #ffffff;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
@@ -278,7 +271,7 @@ a:hover {
 }
 
 ::selection {
-    background: #d995ee;
+    background: #555555;
     color: #ffffff;
 }
 
@@ -295,7 +288,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 200px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
     text-align: center;
