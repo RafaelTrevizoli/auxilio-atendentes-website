@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="../../../img/fivcon.png" />
     <link rel="stylesheet" href="../../../styles/secundary-pag.css">
-    <title>Madeira - 45x11,50cm</title>
+    <title>Madeira - 53x05cm</title>
 </head>
 
 <body>
-    <h1>Madeira 45x11,50cm - Ambientes</h1>
+    <h1>Madeira 53x05cm - Ambientes</h1>
 
     <header>
         <ul>
             <li><a href="../../../index.html">MENU PRINCIPAL</a></li>
-            <li><a href="pag45x1150.html">ABA ANTERIOR</a></li>
+            <li><a href="pag53x05.html">ABA ANTERIOR</a></li>
         </ul>
     </header>
 
@@ -65,7 +65,7 @@
 
             for (var i = 0; i < s.length / 2; i++) {
                 media[i] = s[i * 2] * s[i * 2 + 1];
-                result[i] = Math.ceil(media[i] / 0.05175);
+                result[i] = Math.ceil(media[i] / 0.0265);
             }
 
             var resultadoDiv = document.getElementById('resultado');
@@ -97,7 +97,7 @@
             valortotalComDesconto = valortotalComDesconto.toFixed(2);
 
             if (quantidadeTotal >= 10) {
-                resultadoDiv.innerHTML += "<br>Totalizará " + quantidadeTotal + " unidades de peças 45x11,50cm !!! " + "<br>" + "<br>"
+                resultadoDiv.innerHTML += "<br>Totalizará " + quantidadeTotal + " unidades de peças 53x05cm !!! " + "<br>" + "<br>"
                     + "O valor total das " + quantidadeTotal + " unidades é de R$" + somaTotal.toFixed(2) + ", Porém estou lhe disponibilizando um super cupom de desconto de " + cupomDesconto + "%, e o valor final será de R$" + valortotalComDesconto + "<br>" + "<br>"
                     + "Caso queira, eu posso criar um anúncio personalizado com a quantidade necessária, o que acha?😉";
             }
