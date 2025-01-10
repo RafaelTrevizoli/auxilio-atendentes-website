@@ -50,6 +50,13 @@
         document.getElementById('calcular').addEventListener('click', function () {
             calculoDescontos('valor', 'resultado');
         });
+
+        document.getElementById('valor').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('calcular').click();
+            }
+        });
     </script>
 
     <footer>
