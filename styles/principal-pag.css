@@ -86,6 +86,7 @@ h1, p, ul, .border, .rodateto, form, .label, input[type="number"], .button-calcu
     font-size: 45px;
     height: 70px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 80px;
     margin-top: 20px;
 }
 
