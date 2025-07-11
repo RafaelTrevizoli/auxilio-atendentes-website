@@ -71,20 +71,6 @@
 
     <div class="conjunto-meio">
 
-        <div class="borda-liverpool">
-            <h2>LIVERPOOL</h2>
-            <ul>
-                <li><a href="pags/liverpool/15x15cm/pag15x15.html">15x15cm</a></li>
-            </ul>
-        </div>
-
-        <div class="borda-espuma">
-            <h2>ESPUMA</h2>
-            <ul>
-                <li><a href="pags/espuma/30x30cm/pag30x30.html">30x30cm</a></li>
-            </ul>
-        </div>
-
         <div class="borda-madeira">
             <h2>MADEIRA</h2>
             <ul>
@@ -96,6 +82,22 @@
                 <li><a href="pags/madeira/45x1150cm/pag45x1150.html">45x11.50cm</a></li>
             </ul>
         </div>
+
+        <div class="borda-madeira-adesivada">
+            <h2>MADEIRA ADESIVADA</h2>
+            <ul>
+                <li><a href="pags/madeira_adesivada/45x16/pag45x16.html">45x16cm</a></li>
+                <li><a href="pags/madeira_adesivada/90x16/pag90x16.html">90x16cm</a></li>
+            </ul>
+        </div>
+
+        <div class="borda-espuma">
+            <h2>ESPUMA</h2>
+            <ul>
+                <li><a href="pags/espuma/30x30cm/pag30x30.html">30x30cm</a></li>
+            </ul>
+        </div>
+
     </div>
 
 
@@ -111,6 +113,13 @@
             </ul>
         </div>
 
+        <div class="borda-liverpool">
+            <h2>LIVERPOOL</h2>
+            <ul>
+                <li><a href="pags/liverpool/15x15cm/pag15x15.html">15x15cm</a></li>
+            </ul>
+        </div>
+
         <div class="borda-cabeceira">
             <h2>CABECEIRA</h2>
             <ul>
@@ -119,15 +128,7 @@
             </ul>
         </div>
 
-        <div class="borda-acrilico">
-            <h2>ACRÍLICO</h2>
-            <ul>
-                <li><a href="pags/acrilico/10x10cm/pag10x10.html" class="maintenance-link">10x10cm</a></li>
-                <li><a href="pags/acrilico/098x085cm/pag098x085.html" class="maintenance-link">9.8x8.5cm</a></li>
-            </ul>
-        </div>
     </div>
-
 </div>
 
 <div class="faixa-meio">
@@ -151,19 +152,5 @@
     </div>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const maintenanceLinks = document.querySelectorAll('.maintenance-link');
-
-        maintenanceLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Em manutenção, aguarde!');
-            });
-        });
-    });
-</script>
-
 </body>
-
 </html>

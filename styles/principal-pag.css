@@ -27,7 +27,6 @@ body {
 }
 
 h1, p, ul, .border, .rodateto, form, .label, input[type="number"], .button-calcular, .button-apagar, .category, .button-copiar, .result, footer, .y1, .y2, .y3, .y4,
-
 ::selection {
     animation: slideIn 0.5s ease-in-out forwards;
 }
@@ -168,6 +167,7 @@ a {
 .borda-liverpool,
 .borda-pvc,
 .borda-madeira,
+.borda-madeira-adesivada,
 .borda-espuma,
 .borda-cabeceira,
 .borda-adesivo,
@@ -253,6 +253,13 @@ a {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+.borda-madeira-adesivada:hover {
+    background-image: url('../img/madeira_adesivada.jpg');
+    transform: scale(1.02);
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
 .borda-porcelanato:hover h2,
 .borda-isopor:hover h2,
 .borda-pvc:hover h2,
@@ -262,6 +269,7 @@ a {
 .borda-adesivo:hover h2,
 .borda-cabeceira:hover h2,
 .borda-desconto:hover h2,
+.borda-madeira-adesivada:hover h2,
 .borda-acrilico:hover h2 {
     color: #ffffff;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
