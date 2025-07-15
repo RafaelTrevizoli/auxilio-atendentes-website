@@ -1,22 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,400&display=swap');
 
 body {
-    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../img/fundo_pp.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    opacity: 0;
-    animation: fadeIn 0.2s ease-in-out forwards;
+    background-color: #0F172A;
 }
 
 @keyframes fadeIn {
@@ -41,19 +33,17 @@ body {
     }
 }
 
-h1, p, ul, form, footer, header, .border,.label,input[type="number"],.button-calcular,.button-apagar,.button-copiar,.result,.y1,.y2,.y3,.y4,
-
+h1, p, ul, form, footer, header, .border, .label, input[type="number"], .button-calcular, .button-apagar, .button-copiar, .result, .y1, .y2, .y3, .y4,
 ::selection {
     animation: slideIn 0.5s ease-in-out forwards;
 }
 
 h1 {
-    background: linear-gradient(0.25turn, #2d0579, #994fee, #ff00b3);
+    background: linear-gradient(0.25turn, #491B6E, #1E293B, #CB5ACB);
     color: #fff;
     padding: 20px;
     margin: 0;
     width: 100%;
-
     text-shadow: 2px 2px 2px #4f195f;
 }
 
@@ -84,21 +74,21 @@ li {
 }
 
 header {
-    background-color: #9f6af3;
+    background-color: #27354b;;
     height: 54px;
     margin: 0;
     width: 100%;
 }
 
-header span{
+header span {
     color: #f5f5f5;
 }
 
-header ul{
+header ul {
     margin-top: -15px;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
@@ -123,19 +113,19 @@ a.active {
 }
 
 .border {
-    border: 1px solid #ccc;
+    border: 1.50px solid #4C525C;
     border-radius: 10px;
     margin: 20px 0;
     padding: 30px;
     width: 100%;
     max-width: 400px;
-    background-color: #fff;
+    background-color: #1E293B;
     transition: border-color 0.3s ease-in-out;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+}
 
 .border:hover {
     border-color: #7d63b3;
-    background-color: #f5f5f5;
+    background-color: #1E293B;
 }
 
 form {
@@ -147,7 +137,7 @@ form {
 
 label {
     font-weight: bold;
-    color: #6c5b7b;
+    color: #FFFFFF;
     margin-bottom: 5px;
 }
 
@@ -155,14 +145,26 @@ input[type="number"] {
     width: 90%;
     padding: 10px;
     margin: 7px 0;
-    border: 1px solid #e3bbfa;
+    border: 1px solid #334155; /* substitui o roxo claro pelo tom escuro */
     border-radius: 5px;
+    background-color: #0F172A;
+    color: #ffffff;
     transition: border-color 0.3s ease;
 }
 
-input[type="number"]:focus {
-    border-color: #7d63b3;
+input[type="number"]::placeholder {
+    color: #ffffff;
+    opacity: 0.6;
 }
+
+input[type="number"]:focus {
+    background-color: #131d33;
+    color: #ffffff;
+    border: 1px solid #513073; /* roxo rosado no foco */
+    outline: none;
+    box-shadow: none;
+}
+
 
 .button-calcular,
 .button-apagar,
@@ -195,7 +197,7 @@ input[type="number"]:focus {
 }
 
 .result {
-    background-color: #7d63b3;
+    background-color: #1E293B;
     color: #fff;
     padding: 20px;
     margin: 20px;
@@ -225,16 +227,12 @@ input[type="number"]:focus {
     color: #ffffff;
 }
 
-
 footer {
-    background-color: #994fee;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 260px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
     width: 100%;
 }

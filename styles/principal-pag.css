@@ -8,12 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../img/fundo_pp.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    transition: background-image 0.5s ease-in-out;
+    background-color: #0F172A;
 }
 
 @keyframes fadeIn {
@@ -44,7 +39,7 @@ h1, p, ul, .border, .rodateto, form, .label, input[type="number"], .button-calcu
 }
 
 .teto-cima {
-    background: linear-gradient(0.25turn, #2d0579, #994fee, #ff00b3);
+    background: linear-gradient(0.25turn, #491B6E, #1E293B, #CB5ACB);
     color: #fff;
     padding: 20px 0;
     width: 100%;
@@ -59,7 +54,7 @@ h1, p, ul, .border, .rodateto, form, .label, input[type="number"], .button-calcu
 }
 
 .teto-meio {
-    background-color: #994fee;
+    background-color: #27354b;
     color: #fff;
     width: 100%;
     font-size: 45px;
@@ -75,16 +70,16 @@ h1, p, ul, .border, .rodateto, form, .label, input[type="number"], .button-calcu
 .teto-baixo {
     width: 100%;
     height: 70px;
-    background-color: #924fdd;
+    background-color: #1E293B;
 }
 
 .faixa-meio {
-    background-color: #994fee;
+    background-color: #1E293B;
     color: #fff;
     width: 95%;
     font-size: 45px;
     height: 70px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-bottom: 0.5px solid #4c525c;
     border-radius: 80px;
     margin-top: 20px;
 }
@@ -94,7 +89,7 @@ h2 {
     text-align: center;
     align-items: center;
     font-size: 25px;
-    color: #6b4987;
+    color: #FFFFFF;
 }
 
 h3 {
@@ -158,8 +153,8 @@ a {
     padding: 10px;
     width: 400px;
     height: 150px;
-    background-color: #fff;
-    border: 1.50px solid #ccc;
+    background-color: #1E293B;
+    border: 1.50px solid #4C525C;
     transition: border-color 0.3s ease-in-out;
 }
 
@@ -179,8 +174,8 @@ a {
     padding: 30px;
     width: 330px;
     height: 650px;
-    background-color: #fff;
-    border: 1.50px solid #8c6cff;
+    background-color: #1E293B;
+    border: 1.50px solid #4C525C;
     transition: border-color 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -301,14 +296,11 @@ a:hover {
 }
 
 footer {
-    background-color: #994fee;
     color: white;
     text-align: center;
-    padding: 20px 0;
     margin-top: 150px;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
     width: 100%;
 }
