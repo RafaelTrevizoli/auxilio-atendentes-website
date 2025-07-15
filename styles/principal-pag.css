@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../img/fundo-pp.jpg');
+    background-image: url('../img/fundo_pp.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -172,12 +172,13 @@ a {
 .borda-cabeceira,
 .borda-adesivo,
 .borda-isopor,
-.borda-acrilico {
+.borda-acrilico,
+.borda-madeira-vazada {
     border-radius: 10px;
     margin: 20px 0;
     padding: 30px;
     width: 330px;
-    height: 550px;
+    height: 650px;
     background-color: #fff;
     border: 1.50px solid #8c6cff;
     transition: border-color 0.2s ease-in-out, transform 0.3s ease-in-out;
@@ -198,7 +199,7 @@ a {
 }
 
 .borda-madeira:hover {
-    background-image: url('../img/mad.jpg');
+    background-image: url('../img/madeira_ripada.jpg');
     transform: scale(1.02);
     transition: transform 0.3s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -255,6 +256,13 @@ a {
 
 .borda-madeira-adesivada:hover {
     background-image: url('../img/madeira_adesivada.jpg');
+    transform: scale(1.02);
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.borda-madeira-vazada:hover {
+    background-image: url('../img/madeira_vazada.jpg');
     transform: scale(1.02);
     transition: transform 0.3s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
