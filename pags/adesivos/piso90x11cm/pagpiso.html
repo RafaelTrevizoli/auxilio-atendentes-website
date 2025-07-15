@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="../../../img/fivcon.png" />
     <link rel="stylesheet" href="../../../styles/secundary-pag.css">
-    <title>Adesivo - 90x14,50cm</title>
+    <title>Adesivo - 90x11cm</title>
 </head>
 
 <body>
-    <h1>Adesivo 90x14,50cm - Kits</h1>
+    <h1>Adesivo 90x11cm - Unitário</h1>
 
     <header>
         <ul>
             <li><a href="../../../index.html">MENU PRINCIPAL</a></li>
-            <li><a href="pagpiso.html">ABA ANTERIOR</a></li>
+            <li><a href="kitpiso.html">KITS</a></li>
+            <li><a href="qntpiso.html">MÚLTIPLOS AMBIENTES</a>
+            </li>
         </ul>
     </header>
 
     <div class="geral">
         <div class="border">
             <div class="center">
-                <form id="calcForm">
+                <form>
                     <div class="form">
                         <label for="n1">Digite a primeira medida (<y class="y3">m</y>): </label>
                         <input type="number" name="n1" id="n1" step="0.01">
@@ -31,6 +33,11 @@
                     <div class="form">
                         <label for="n2">Digite a segunda medida (<y class="y3">m</y>): </label>
                         <input type="number" name="n2" id="n2" step="0.01">
+                    </div>
+
+                    <div class="form">
+                        <label for="value1">Digite o valor do adesivo unitário (<y class="y4">R$</y>): </label>
+                        <input type="number" name="value1" id="value1" step="0.01">
                     </div>
 
                     <div>
@@ -48,6 +55,12 @@
                         <label for="m1">Digite a medida em (<y class="y3">m²</y>): </label>
                         <input type="number" name="m1" id="m1" step="0.01">
                     </div>
+
+                    <div class="form">
+                        <label for="value2">Digite o valor do adesivo unitário (<y class="y4">R$</y>): </label>
+                        <input type="number" name="value2" id="value2" step="0.01">
+                    </div>
+
                     <div>
                         <input class="button-calcular" type="button" id="calcular2" value="Calcular">
                         <button class="button-apagar" type="button" id="apagarMedidas2">Apagar Campo</button>
@@ -58,19 +71,22 @@
     </div>
 
     <div class="result" id="resultado"></div>
+    <button class="button-copiar" id="botao">Copiar Texto</button>
 
+    <script src="../../js/cop.js"></script>
     <script src="../../js/del.js"></script>
     <script src="../../js/functions.js"></script>
 
+
     <script>
         document.getElementById('calcular').addEventListener('click', function () {
-            calculoAlturaLarguraKit10('n1', 'n2', 'resultado', 0.1305);
+            calculoAlturaLargura('n1', 'n2', 'value1', 'resultado', 0.099, '90x11cm');
         });
     </script>
 
     <script>
         document.getElementById('calcular2').addEventListener('click', function () {
-            calculoMetroQuadradoKit10('m1', 'resultado', 0.1305);
+            calculoMetroQuadrado('m1', 'value2', 'resultado', 0.099, '90x11cm');
         });
     </script>
 
