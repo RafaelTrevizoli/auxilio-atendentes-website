@@ -97,7 +97,7 @@ header a {
 }
 
 a:hover {
-    color: #320081;
+    color: #cbcaca;
 }
 
 a.active {
@@ -124,7 +124,7 @@ a.active {
 }
 
 .border:hover {
-    border-color: #7d63b3;
+    border-color: #513073;
     background-color: #1E293B;
 }
 
