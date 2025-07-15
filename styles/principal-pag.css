@@ -102,7 +102,7 @@ p {
     margin-top: 0px;
     color: #ffffff;
     font-family: 'Allura', cursive;
-    text-shadow: 2px 2px 2px #8b8888;
+    text-shadow: 2px 2px 2px #513073;
 }
 
 ul {
@@ -117,7 +117,6 @@ ul {
 
 li {
     margin: 30px 20px;
-    margin: 30px 20px;
     width: 200px;
 }
 
@@ -129,6 +128,10 @@ a {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+a:hover {
+    background-color: #6c5b7b;
 }
 
 .meio {
@@ -278,9 +281,6 @@ a {
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
-a:hover {
-    background-color: #6c5b7b;
-}
 
 ::selection {
     background: #555555;
