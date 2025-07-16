@@ -11,33 +11,6 @@ body {
     background-color: #0F172A;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-h1, p, ul, form, footer, header, .border, .label, input[type="number"], .button-calcular, .button-apagar, .button-copiar, .result, .y1, .y2, .y3, .y4,
-::selection {
-    animation: slideIn 0.5s ease-in-out forwards;
-}
-
 h1 {
     background: linear-gradient(0.25turn, #491B6E, #1E293B, #CB5ACB);
     color: #fff;
