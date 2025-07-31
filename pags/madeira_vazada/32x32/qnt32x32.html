@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="../../../img/fivcon.png" />
     <link rel="stylesheet" href="../../../styles/secundary-pag.css">
-    <title>Porcelanato - 60x15cm</title>
+    <title>Madeira - 32x32cm</title>
 </head>
 
 <body>
-    <h1>Porcelanato 60x15cm - Ambientes</h1>
+    <h1>Madeira 32x32cm - Ambientes</h1>
 
     <header>
         <ul>
             <li><a href="../../../index.html">MENU PRINCIPAL</a></li>
-            <li><a href="pag60x15.html">ABA ANTERIOR</a></li>
+            <li><a href="pag32x32.html">ABA ANTERIOR</a></li>
         </ul>
     </header>
 
@@ -65,12 +65,12 @@
 
             for (var i = 0; i < s.length / 2; i++) {
                 media[i] = s[i * 2] * s[i * 2 + 1];
-                result[i] = Math.ceil(media[i] / 0.09);
+                result[i] = Math.ceil(media[i] / 0.1024);
             }
 
             var resultadoDiv = document.getElementById('resultado');
 
-            resultadoDiv.innerHTML = "Segue abaixo a quantidade necessária para cada medida informada!💜 <br> <br>";
+            resultadoDiv.innerHTML = "Segue abaixo a quantidade necessária para cada medida informada !!!💜 <br> <br>";
 
             var somaTotal = 0;
             var quantidadeTotal = 0;
@@ -97,21 +97,20 @@
             valortotalComDesconto = valortotalComDesconto.toFixed(2);
 
             if (quantidadeTotal >= 10) {
-                resultadoDiv.innerHTML += "<br>Totalizará " + quantidadeTotal + " unidades de placas 60x15cm! " + "<br>" + "<br>"
+                resultadoDiv.innerHTML += "<br>Totalizará " + quantidadeTotal + " unidades de peças 32x32cm !!! " + "<br>" + "<br>"
                     + "O valor total das " + quantidadeTotal + " unidades é de R$" + somaTotal.toFixed(2) + ", Porém estou lhe disponibilizando um super cupom de desconto de " + cupomDesconto + "%, e o valor final será de R$" + valortotalComDesconto + "<br>" + "<br>"
                     + "Caso queira, eu posso criar um anúncio personalizado com a quantidade necessária, o que acha?😉";
             }
         });
     </script>
-
+    
     <script src="../../js/copvaries.js"></script>
     <script src="../../js/delvaries.js"></script>
     <script src="../../js/updatevaries.js"></script>
 
     <footer>
         <div class="footer-content">
-            <h4 class="text-name">&copy; 2024 Created by : <y class="text-name-cor"> Rafael Konscca</y>
-            </h4>
+            <h4 class="text-name">&copy; 2024 Created by : <y class="text-name-cor"> Rafael Konscca</y></h4>
         </div>
     </footer>
 </body>
