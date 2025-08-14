@@ -1,59 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,400&display=swap');
 
 body {
-    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../img/fundo-pp.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    opacity: 0;
-    animation: fadeIn 0.2s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-h1, p, ul, form, footer, header, .border,.label,input[type="number"],.button-calcular,.button-apagar,.button-copiar,.result,.y1,.y2,.y3,.y4,
-
-::selection {
-    animation: slideIn 0.5s ease-in-out forwards;
+    background-color: #0F172A;
 }
 
 h1 {
-    background: linear-gradient(0.25turn, #2d0579, #994fee, #ff00b3);
+    background: linear-gradient(0.25turn, #491B6E, #1E293B, #CB5ACB);
     color: #fff;
     padding: 20px;
     margin: 0;
     width: 100%;
-
     text-shadow: 2px 2px 2px #4f195f;
 }
 
@@ -84,21 +47,21 @@ li {
 }
 
 header {
-    background-color: #9f6af3;
+    background-color: #27354b;;
     height: 54px;
     margin: 0;
     width: 100%;
 }
 
-header span{
+header span {
     color: #f5f5f5;
 }
 
-header ul{
+header ul {
     margin-top: -15px;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
@@ -107,7 +70,7 @@ header a{
 }
 
 a:hover {
-    color: #320081;
+    color: #cbcaca;
 }
 
 a.active {
@@ -123,19 +86,19 @@ a.active {
 }
 
 .border {
-    border: 1px solid #ccc;
+    border: 1.50px solid #4C525C;
     border-radius: 10px;
     margin: 20px 0;
     padding: 30px;
     width: 100%;
     max-width: 400px;
-    background-color: #fff;
+    background-color: #1E293B;
     transition: border-color 0.3s ease-in-out;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+}
 
 .border:hover {
-    border-color: #7d63b3;
-    background-color: #f5f5f5;
+    border-color: #513073;
+    background-color: #1E293B;
 }
 
 form {
@@ -147,7 +110,7 @@ form {
 
 label {
     font-weight: bold;
-    color: #6c5b7b;
+    color: #FFFFFF;
     margin-bottom: 5px;
 }
 
@@ -155,47 +118,70 @@ input[type="number"] {
     width: 90%;
     padding: 10px;
     margin: 7px 0;
-    border: 1px solid #e3bbfa;
+    border: 1px solid #334155; /* substitui o roxo claro pelo tom escuro */
     border-radius: 5px;
+    background-color: #0F172A;
+    color: #ffffff;
     transition: border-color 0.3s ease;
 }
 
+input[type="number"]::placeholder {
+    color: #ffffff;
+    opacity: 0.6;
+}
+
 input[type="number"]:focus {
-    border-color: #7d63b3;
+    background-color: #131d33;
+    color: #ffffff;
+    border: 1px solid #513073; /* roxo rosado no foco */
+    outline: none;
+    box-shadow: none;
 }
 
 .button-calcular,
 .button-apagar,
 .button-update,
 .button-copiar {
-    margin-top: 20px;
-    background-color: #7d63b3;
-    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    color: #7d63b3;
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border: 1px solid #7d63b3;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .button-calcular:hover {
-    background-color: rgb(0, 255, 0);
+    background-color: #7d63b3;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .button-copiar:hover {
-    background-color: rgb(138, 198, 255);
+    background-color: #7d63b3;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .button-apagar:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: #7d63b3;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .button-update:hover {
-    background-color: rgb(255, 217, 0);
+    background-color: #7d63b3;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+
 .result {
-    background-color: #7d63b3;
+    background-color: #1E293B;
     color: #fff;
     padding: 20px;
     margin: 20px;
@@ -225,16 +211,12 @@ input[type="number"]:focus {
     color: #ffffff;
 }
 
-
 footer {
-    background-color: #994fee;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 260px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
     width: 100%;
 }

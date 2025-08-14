@@ -4,67 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="../../img/fivcon.png" />
+    <link rel="shortcut icon" type="image/jpg" href="../../img/fivcon.png"/>
     <link rel="stylesheet" href="../../styles/secundary-pag.css">
     <title>Descontos</title>
 </head>
 
 <body>
 
-    <h1>Descontos</h1>
+<h1>Descontos</h1>
 
-    <header>
-        <ul>
-            <li><a href="../../index.html">MENU PRINCIPAL</a></li>
-            </li>
-        </ul>
-    </header>
+<header>
+    <ul>
+        <li><a href="../../index.html">MENU PRINCIPAL</a></li>
+        </li>
+    </ul>
+</header>
 
-    <div class="geral">
-        <div class="border">
-            <div class="center">
-                <form>
-                    <div class="form">
-                        <label for="valor">Digite o valor total (<y class="y4">R$</y>): </label>
-                        <input type="number" name="valor" id="valor" step="0.01">
-                    </div>
+<div class="geral">
+    <div class="border">
+        <div class="center">
+            <form>
+                <div class="form">
+                    <label for="valor">Digite o valor total (
+                        <y class="y4">R$</y>
+                        ): </label>
+                    <input type="number" name="valor" id="valor" step="0.01">
+                </div>
 
-                    <div>
-                        <input class="button-calcular" type="button" id="calcular" value="Calcular">
-                        <button class="button-apagar" type="button" id="apagarMedidas">Apagar Campo</button>
-                    </div>
-                </form>
-            </div>
+                <div>
+                    <input class="button-calcular" type="button" id="calcular" value="Calcular">
+                    <button class="button-apagar" type="button" id="apagarMedidas">Apagar Campo</button>
+                </div>
+
+                <y class="y4">Digite o valor no formato correto: 2323,30 (sem pontos para separar milhar e com vírgula como
+                    separador decimal).
+                </y>
+            </form>
         </div>
     </div>
+</div>
+
+<div class="result" id="resultado"></div>
+<button class="button-copiar" id="botao">Copiar Texto</button>
+
+<script src="../js/functions.js"></script>
+<script src="../js/cop.js"></script>
+<script src="../js/del.js"></script>
+
+<script>
+    document.getElementById('calcular').addEventListener('click', function () {
+        calculoDescontos('valor', 'resultado');
+    });
+
+    document.getElementById('valor').addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.getElementById('calcular').click();
+        }
+    });
+</script>
+
+<footer>
+    <div class="footer-content">
+        <h4 class="text-name">&copy; 2024 Created by :
+            <y class="text-name-cor"> Rafael Konscca</y>
+        </h4>
     </div>
-
-    <div class="result" id="resultado"></div>
-    <button class="button-copiar" id="botao">Copiar Texto</button>
-
-    <script src="../js/functions.js"></script>
-    <script src="../js/cop.js"></script>
-    <script src="../js/del.js"></script>
-
-    <script>
-        document.getElementById('calcular').addEventListener('click', function () {
-            calculoDescontos('valor', 'resultado');
-        });
-
-        document.getElementById('valor').addEventListener('keypress', function (event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                document.getElementById('calcular').click();
-            }
-        });
-    </script>
-
-    <footer>
-        <div class="footer-content">
-            <h4 class="text-name">&copy; 2024 Created by : <y class="text-name-cor"> Rafael Konscca</y>
-            </h4>
-        </div>
-    </footer>
+</footer>
 
 </body>
 

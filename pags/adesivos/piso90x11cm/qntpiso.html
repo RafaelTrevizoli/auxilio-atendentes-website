@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="../../../img/fivcon.png" />
     <link rel="stylesheet" href="../../../styles/secundary-pag.css">
-    <title>Adesivo - 90x14,50cm</title>
+    <title>Adesivo - 90x11cm</title>
 </head>
 
 <body>
-    <h1>Adesivo 90x14,50cm - Ambientes</h1>
+    <h1>Adesivo 90x11cm - Ambientes</h1>
 
     <header>
         <ul>
@@ -66,7 +66,7 @@
 
             for (var i = 0; i < s.length / 2; i++) {
                 media[i] = s[i * 2] * s[i * 2 + 1];
-                result[i] = Math.ceil(media[i] /0.1305);
+                result[i] = Math.ceil(media[i] /0.099);
             }
 
             var resultadoDiv = document.getElementById('resultado');
@@ -98,7 +98,7 @@
             valortotalComDesconto = valortotalComDesconto.toFixed(2);
 
             if (quantidadeTotal >= 10) {
-                resultadoDiv.innerHTML += "<br>Totalizará " + quantidadeTotal + " unidades de adesivo 90x14,50cm! " + "<br>" + "<br>"
+                resultadoDiv.innerHTML += "<br>Totalizará " + quantidadeTotal + " unidades de adesivo 90x11cm! " + "<br>" + "<br>"
                     + "O valor total das " + quantidadeTotal + " unidades é de R$" + somaTotal.toFixed(2) + ", Porém estou lhe disponibilizando um super cupom de desconto de " + cupomDesconto + "%, e o valor final será de R$" + valortotalComDesconto + "<br>" + "<br>"
                     + "Caso queira, eu posso criar um anúncio personalizado com a quantidade necessária, o que acha?😉";
             }
